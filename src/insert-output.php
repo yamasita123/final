@@ -4,8 +4,9 @@
 <?php require 'header.php'; ?>
 <?php 
     $pdo=new PDO($connect, USER, PASS);
-    $sql=$pdo->pripare('insert into Todo values(null,?,?)');
-    $sql->execute([$_POST['naiyou'], NOW()]);
+    $sql=$pdo->prepare('insert into Todo values(null,?,sysdate');
+    $sql->execute([
+        $_POST['naiyou']
+    ]);
     echo '登録しました。';
 ?>
-
