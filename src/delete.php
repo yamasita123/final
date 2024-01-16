@@ -1,15 +1,24 @@
+<?php require 'db-connect.php'; ?>
+<?php require 'header.php'; ?>
+<?php require 'menu.php'; ?>
+
+<body>
+    <table>
+    <tr><th>番号</th><th>内容</th><th>日付</th></tr>
 <?php
-if (!empty($_SESSION['Todo'])) {
-    echo '<table>';
-    echo '<tr><th>番号</th><th>内容</th><th>日付</th></tr>';
-    foreach ($_SESSION['Todo'] as $id=>$Todo){
+    $pdo=new PDO($connect, USER, PASS);
+    foreach($pdo->query('select * from Todo') as $row){
         echo '<tr>';
-        echo '<td>', $id, '</td>';
-        echo '<td>', $Todo['naiyou'];
-        echo '<td>', $Todo['date'], '</td>';
-        echo '<td><a href="delete2.php?id=', $id, '">削除</a></td>';
+        echo '<td>',$row['id'], '</td>';
+        echo '<td>',$row['naiyou'], '</td>';
+        echo '<td>',$row['date'], '</td>';
+        echo '<td>';
+        echo '<a href="delete2.php?id=', $row['id'], '">削除</a>';
+        echo '</td>';
         echo '</tr>';
+        echo "\n";
     }
-    echo '</table>';
-}
+
 ?>
+    </table>
+    </body>
