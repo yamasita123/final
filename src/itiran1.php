@@ -1,4 +1,5 @@
 <?php require 'header.php'; ?>
+
 <?php 
 echo '<table>';
 echo '<tr><th>番号</th><th>内容</th><th>日付</th></tr>'; 
