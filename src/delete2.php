@@ -1,5 +1,7 @@
 <?php require 'db-connect.php'; ?>
 <?php require 'header.php'; ?>
+<link rel="stylesheet" href="./css/itiran.css">
+<div class=iti>
 <?php
 $pdo=new PDO($connect, USER, PASS);
 $sql=$pdo->prepare('delete from Todo where id=?');
@@ -25,5 +27,6 @@ if($sql->execute([$_GET['id']])){
             ?>
         </table>
         <form action="delete.php" method="post">
-            <button type="submit">前へ戻る</button>
+            <button type="submit">削除画面へ戻る</button>
         </form>
+        </div>
