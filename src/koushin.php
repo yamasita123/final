@@ -1,8 +1,9 @@
 <?php require 'db-connect.php'; ?>
 <?php require 'menu.php'; ?>
 <?php require 'header.php'; ?>
-<div class="th0">番号</div>
-<div class="th1">内容</div>
+<link rel="stylesheet" href="./css/koushin.css">
+<div class="koushin">
+
 <?php $pdo=new PDO($connect, USER, PASS);
 
 foreach($pdo->query('select * from Todo') as $row){
@@ -17,5 +18,6 @@ foreach($pdo->query('select * from Todo') as $row){
     echo "\n";
 }
 ?>
+</div>
 </body>
 </html>
