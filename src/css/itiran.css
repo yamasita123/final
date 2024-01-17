@@ -1,0 +1,14 @@
+.iti{
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(26, 25, 25, 0.1);
+    border-radius: 8px;
+}
+
+th, td{
+    border: 2px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
