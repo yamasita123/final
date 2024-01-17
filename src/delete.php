@@ -1,7 +1,8 @@
 <?php require 'db-connect.php'; ?>
 <?php require 'header.php'; ?>
 <?php require 'menu.php'; ?>
-
+<link rel="stylesheet" href="./css/itiran.css">
+<div class=iti>
 <body>
     <table>
     <tr><th>番号</th><th>内容</th><th>日付</th></tr>
@@ -22,3 +23,4 @@
 ?>
     </table>
     </body>
+    </div>
