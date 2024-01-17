@@ -1,5 +1,6 @@
 <?php require 'header.php'; ?>
-
+<link rel="stylesheet" href="./css/itiran.css">
+<div class=iti>
 <?php 
 echo '<table>';
 echo '<tr><th>番号</th><th>内容</th><th>日付</th></tr>'; 
@@ -15,3 +16,4 @@ foreach($sql as $row){
 }
 echo '</table>';
 ?>
+</div>
