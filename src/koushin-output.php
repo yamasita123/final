@@ -4,9 +4,8 @@
 
 <?php
 $pdo=new PDO($connect, USER, PASS);
-$date = date("Y/m/d H:i:s");
-$sql=$pdo->prepare('update Todo  set naiyou=?, date=$date where id=?');
-if($sql->execute([htmlspecialchars($_POST['naiyou']),$date])){
+$sql=$pdo->prepare('update Todo  set naiyou=? where id=?');
+if($sql->execute([htmlspecialchars($_POST['naiyou']), $_POST['id']])){
     echo '更新しました。';
 }else{
     echo '更新できませんでした。';
