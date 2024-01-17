@@ -1,6 +1,8 @@
 <?php require 'db-connect.php'; ?>
 <?php require 'menu.php'; ?>
 <?php require 'header.php'; ?>
+<link rel="stylesheet" href="./css/itiran.css">
+<div class=iti>
 <?php 
     $pdo=new PDO($connect, USER, PASS);
     $date = date("Y/m/d H:i:s");
@@ -25,6 +27,7 @@
                 }
             ?>
         </table>
-        <form action="insert.php" method="post">
-            <button type="submit">追加画面へ戻る</button>
+        <form action="itiran-show.php" method="post">
+            <button type="submit">一覧画面へ戻る</button>
         </form>
+        </div>
